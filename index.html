@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="aplication-name" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="VS Code">
+        <meta name="author" content="Matheus Ramalho">
+        <meta name="copyright" content="Matheus Ramalho">
+
+        <title> Clock JS </title>
+
+        <!-- STYLES... -->
+        <link type="image/png" rel="shortcut icon" href="">
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap">
+
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" /> -->
+    </head>
+
+    <body>
+        <div class="app__">
+            <div class="app__wrapper">
+                <aside class="app__functions">
+                    <div class="app__header">
+                        <h1> Convert text </h1>
+                        <p> <i> Converta e formate seu texto como desejar. </i> </p>
+                    </div>
+
+                    <ul class="list__action">
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonInicial"> Inicial maiúscula </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonLower"> Minúsculas </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonUpper"> Maiúsculas </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonCapitalized"> Capitalizada </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonCopy"> Copiar </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonClear"> Limpar </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonAlternating" disabled> Alternada </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonTitle" disabled> Título </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonInverse" disabled> Inverter </button>
+                        </li>
+
+                        <li class="list__actionItem">
+                            <button type="button" id="buttonDownload" disabled> Download </button>
+                        </li>
+                    </ul>
+                </aside>
+
+                <main class="app__content">
+                    <div class="app__inner">
+                        <textarea id="textInput" name="text" autofocus placeholder="Informe o texto..."></textarea>
+
+                        <ul class="list__count">
+                            <li class="list__countItem character"> Quantidade de caracteres: <span>X</span> </li>
+                            <li class="list__countItem word"> Quantidade de palavras: <span>X</span> </li>
+                            <li class="list__countItem line"> Quantidade de linhas: <span>X</span> </li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+
+            <footer class="app__footer">
+                <span class="copyright__"> &copy; Matheus Ramalho. Todos os direitos reservados. </span>
+                <a href="https://matheusramalho.dev"> matheusramalho.dev </a>
+            </footer>
+        </div>
+
+
+        <!-- JAVASCRIPT... -->
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
