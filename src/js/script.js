@@ -1,66 +1,68 @@
 // ELEMENTS
 
-let textCase = document.querySelector('#textInput');
-let character = document.querySelector('.count__item.character');
-let word = document.querySelector('.count__item.word');
-let line = document.querySelector('.count__item.line');
+const input = document.querySelector('#textInput');
+const countCharacter = document.querySelector('#countCharacter');
+const countWord = document.querySelector('#countWord');
+const countLine = document.querySelector('#countLine');
 
 // EVENTS
-document.querySelector('#buttonInicial').addEventListener('click', sentenceCase);
-document.querySelector('#buttonLower').addEventListener('click', lowercase);
-document.querySelector('#buttonUpper').addEventListener('click', upperCase);
-document.querySelector('#buttonCapitalized').addEventListener('click', capitalizedCase);
-document.querySelector('#buttonAlternating').addEventListener('click', alternatingCase);
-document.querySelector('#buttonTitle').addEventListener('click', titleCase);
-document.querySelector('#buttonInverse').addEventListener('click', inverseCase);
-document.querySelector('#buttonDownload').addEventListener('click', download);
-document.querySelector('#buttonCopy').addEventListener('click', copyClipboard);
-document.querySelector('#buttonClear').addEventListener('click', clear);
+document.querySelector('.capitalInitialText').addEventListener('click', handleCapitalInitial);
+document.querySelector('.lowercaseText').addEventListener('click', handleLowercase);
+document.querySelector('.capitalText').addEventListener('click', handleUppercase);
+document.querySelector('.capitalizedText').addEventListener('click', handleCapitalized);
+document.querySelector('.copyText').addEventListener('click', handleCopy);
+document.querySelector('.clearText').addEventListener('click', handleClear);
+
+// document.querySelector('#buttonAlternating').addEventListener('click', alternatingCase);
+// document.querySelector('#buttonTitle').addEventListener('click', titleCase);
+// document.querySelector('#buttonInverse').addEventListener('click', inverseCase);
+// document.querySelector('#buttonDownload').addEventListener('click', download);
 
 // FUNCTIONS
 // Como devolver pro input?
 
-function sentenceCase() {
-    let currentValue = document.querySelector('#textInput').value;
+function handleCapitalInitial() { // OK...
+    let currentValue = input.value;
     let newValue = currentValue.charAt(0).toUpperCase() + currentValue.slice(1).toLowerCase();
 
-    console.log(`SentenceCase => ${newValue}`);
+    console.log(`Primeira letra maiúscula => ${newValue}`);
 }
 
-function lowercase() {
-    let currentValue = document.querySelector('#textInput').value;
+function handleLowercase() { // OK...
+    let currentValue = input.value;
     let newValue = currentValue.toLowerCase();
 
-    console.log(`LowerCase => ${newValue}`);
+    console.log(`Texto todo minúsculo => ${newValue}`);
 }
 
-function upperCase() {
-    let currentValue = document.querySelector('#textInput').value;
+function handleUppercase() { // OK...
+    let currentValue = input.value;
     let newValue = currentValue.toUpperCase();
 
-    console.log(`UpperCase => ${newValue}`);
+    console.log(`Texto todo em maiúsculo => ${newValue}`);
 }
 
-function capitalizedCase() { // Mudar para JS
-    let capitalized = document.querySelector('#textInput');
+function handleCapitalized() { // fazer com javaScript
+    let capitalized = input.value;
     capitalized.style.textTransform = 'capitalize';
 }
 
-function alternatingCase() { }
-function titleCase() { }
-function inverseCase() { }
-function download() { }
-
-function copyClipboard() {
+function handleCopy() { // OK...
     document.querySelector("#textInput").select();
     document.execCommand("copy");
 }
 
-function clear() {
-    let clear = document.querySelector('#textInput');
+function handleClear() {
+    let clear = input.value;
     clear.innerHTML = '';
 }
+// function alternatingCase() { }
+// function titleCase() { }
+// function inverseCase() { }
+// function download() { }
+// function countCharacter() { }
+// function countWord() { }
+// function countLine() { }
 
-function countCharacter() { }
-function countWord() { }
-function countLine() { }
+
+

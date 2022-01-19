@@ -1,4 +1,4 @@
-## CONVERT TEXT JS
+## FORMATTING TEXTS JS
 
 Projeto de uma variedades de funções para formatações de um texto informado pelo usuário, feito com html, sass e javaScript.
 
